@@ -44,7 +44,7 @@ The favorites data still exists in your Discord settings, but there's no way to:
 ### Download Pre-built Releases
 1. Go to the [Releases](https://github.com/fishylunar/discord-favorites-manager/releases) page
 2. Download the appropriate version for your platform:
-   - **Windows**: `.exe` installer or portable version
+   - **Windows**: `.exe`
    - **macOS**: You will have to build from src yourself here as i couldnt be bothered to transfer back-and-forth to my macbook XD
    - **Linux**: `.AppImage`, `.deb`, `.rpm`, or `.tar.gz`
 
