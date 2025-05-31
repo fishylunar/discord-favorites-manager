@@ -15,7 +15,10 @@
     "dist:mac": "npm run build && electron-builder --mac",
     "dist:linux": "npm run build && electron-builder --linux"
   },
-  "author": "FishyLunar",
+  "author": {
+    "name": "FishyLunar",
+    "email": "funnypurplefox@gmail.com"
+  },
   "build": {
     "appId": "com.github.fishylunar.discord-favorites-manager",
     "productName": "Discord Favorites Manager",
