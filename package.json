@@ -1,0 +1,139 @@
+{
+  "name": "discord-favorites-manager",
+  "version": "1.0.0",
+  "description": "A GUI application for managing Discord favorites",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs --mode production",
+    "dev": "webpack-dev-server --config webpack.config.cjs --mode development",
+    "electron": "electron .",
+    "start": "electron .",
+    "electron-dev": "npm run build && electron .",
+    "dist": "npm run build && electron-builder",
+    "dist:all": "npm run build && electron-builder --win --mac --linux",
+    "dist:win": "npm run build && electron-builder --win",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:linux": "npm run build && electron-builder --linux"
+  },
+  "author": "FishyLunar",
+  "build": {
+    "appId": "com.github.fishylunar.discord-favorites-manager",
+    "productName": "Discord Favorites Manager",
+    "copyright": "Copyright © 2025 FishyLunar",
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "dist/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-checkbox": "^1.3.2",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tooltip": "^1.2.7",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/crypto-js": "^4.2.2",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "crypto-js": "^4.2.0",
+    "css-loader": "^7.1.2",
+    "discord-protos": "^1.0.5",
+    "html-webpack-plugin": "^5.6.3",
+    "lucide-react": "^0.511.0",
+    "postcss": "^8.5.4",
+    "postcss-loader": "^8.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "style-loader": "^4.0.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.8",
+    "tailwindcss-animate": "^1.0.7",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "electron": "^36.3.2",
+    "electron-builder": "^26.0.12"
+  }
+}
